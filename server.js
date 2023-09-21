@@ -7,7 +7,7 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 const corsOptions = {
-  origin: "https://michelebellitti.github.io/Portfolio/",
+  origin: "https://michelebellitti.github.io/webapp/",
   optionsSuccessStatus: 200,
 };
 console.log(process.env.EMAIL_USER, process.env.EMAIL_PASS)
