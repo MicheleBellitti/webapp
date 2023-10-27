@@ -21,7 +21,7 @@ function NewsTab() {
     >
       <h3>Latest News</h3>
       <ul>
-        {articles.slice(3, 9).map((article, index) => (
+        {articles.slice(0, 6).map((article, index) => (
           <motion.li key={index} whileHover={{ scale: 0.85 }}>
             <a href={article.url} target="_blank" rel="noopener noreferrer">
               <img src={article.image} alt={article.title} className="news-image" />
