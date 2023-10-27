@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-
 function NewsTab() {
   const [articles, setArticles] = useState([]);
-  const API_KEY = "cb8abfdb50b44061af190f6a3e6e94d0";
+  const API_KEY = "AitkWHVF5LR6nFKd0DBF9wK5cKmuEG8ImbOaOuUrYOv8ZNL8";
 
   useEffect(() => {
-    fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`)
+    fetch(`https://api.currentsapi.services/v1/latest-news?apiKey=${API_KEY}`)
       .then(response => response.json())
-      .then(data => setArticles(data.articles))
+      .then(data => setArticles(data.news))
       .catch(error => console.error("Error fetching news:", error));
   }, []);
 
@@ -22,10 +21,10 @@ function NewsTab() {
     >
       <h3>Latest News</h3>
       <ul>
-        {articles.slice(0, 6).map((article, index) => (
+        {articles.slice(3, 9).map((article, index) => (
           <motion.li key={index} whileHover={{ scale: 0.85 }}>
             <a href={article.url} target="_blank" rel="noopener noreferrer">
-              <img src={article.urlToImage} alt={article.title} className="news-image" />
+              <img src={article.image} alt={article.title} className="news-image" />
               <h4>{article.title}</h4>
             </a>
             <p>{article.description}</p>
