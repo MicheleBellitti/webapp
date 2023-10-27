@@ -7,6 +7,9 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import projBG from "../assets/img/projects_bg.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import AusCareTab from './AuscareTab';
+import NewsTab from "./Newstab";
+
 
 export const Projects = () => {
 
@@ -30,7 +33,7 @@ export const Projects = () => {
   ];
 
   return (
-    <section className="project" id="project">
+    <section className="project" id="projects">
       <Container>
         <Row>
           <Col size={12}>
@@ -45,10 +48,10 @@ export const Projects = () => {
                       <Nav.Link eventKey="first">Overview</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                      <Nav.Link eventKey="second">Auscare PoC</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                      <Nav.Link eventKey="third">How's it going?</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -66,11 +69,12 @@ export const Projects = () => {
                         }
                       </Row>
                     </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                    <Tab.Pane eventKey="second">
+                        <AusCareTab />
                     </Tab.Pane>
+
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <NewsTab />
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
