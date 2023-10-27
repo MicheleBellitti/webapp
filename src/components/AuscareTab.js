@@ -30,7 +30,7 @@ function AusCareTab() {
    
       <motion.h3 variants={titleVariants}>Project Demo</motion.h3>
 
-      <ReactPlayer url='https://www.youtube.com/watch?v=_-Oh0AxJfTw' width='50%' height='240px' />
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_-Oh0AxJfTw?si=z78mnLKEA8mggbul" title="Auscare demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
       <motion.div variants={descriptionVariants} className="auscare-description">
         <h3>About Auscare</h3>

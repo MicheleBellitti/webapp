@@ -19,7 +19,7 @@ function NewsTab() {
       transition={{ delay: 0.5, duration: 1 }}
       className="news-container"
     >
-      <h3>Latest News</h3>
+      <h3></h3>
       <ul>
         {articles.slice(0, 6).map((article, index) => (
           <motion.li key={index} whileHover={{ scale: 0.85 }}>
